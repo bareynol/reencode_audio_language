@@ -7,6 +7,18 @@ This simple script loops through a folder looking for .mkv files, ignores any fi
 
 __This script is fairly dumb. It can overwrite files improperly if not used properly. USE AT YOUR OWN DISCRETION"__
 
+## Usage
+
+1. Copy the file reencode_audio.sh anywhere on your computer
+2. Ensure that ffmpeg is installed:
+    * `sudo apt update && sudo apt install ffmpeg`
+3. Set reencode_audio.sh to be executable
+    * `chmod u+x reencode_audio.sh`
+4. Run the script, passing in the location of the directory containing the files you'd like to reencode.
+    * e.g.: `./reencode_audio.sh /tv/One\ Pace/Season\ 29/`
+    
+## What it does
+
 The script will do the following for each .mkv file in a folder when run:
 
 1. run `ffprobe` on the file, and grep the output to see if it contains the string "(jpn): Audio"
@@ -18,17 +30,6 @@ The script will do the following for each .mkv file in a folder when run:
     * the command maps all input streams from `$filename` and copies them to `$tmpfilename` with language meta-data for the audio stream reencoded as japanese
 3. if previous command successful, overwrites `$filename` with `$tmpfilename`
 4. Logs all of this in `reencode_log.txt`
-
-## Usage
-
-1. Copy the file reencode_audio.sh anywhere on your computer
-2. Ensure that ffmpeg is installed:
-    * `sudo apt update && sudo apt install ffmpeg`
-3. Set reencode_audio.sh to be executable
-    * `chmod u+x reencode_audio.sh`
-4. Run the script, passing in the location of the directory containing the files you'd like to reencode.
-    * e.g.: `./reencode_audio.sh /tv/One\ Pace/Season\ 29/`
-    
 
 ## Example `reencode_log.txt`
 
