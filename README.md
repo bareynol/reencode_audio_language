@@ -5,7 +5,7 @@ I noticed that some of the files in the One Pace collection have their audio str
 
 This simple script loops through a folder looking for .mkv files, ignores any files already encoded with Japanese audio, and re-encodes any others as Japanese.
 
-**This script is fairly dumb. It can overwrite files improperly if not used properly. USE AT YOUR OWN DISCRETION"
+__This script is fairly dumb. It can overwrite files improperly if not used properly. USE AT YOUR OWN DISCRETION"__
 
 The script will do the following for each .mkv file in a folder when run:
 
